@@ -8,6 +8,6 @@ A collection of data-structures implementations in C++.
 - Run following in terminal
 ```
   $ cmake .
-  $ cmake build
+  $ cmake --build .
   $ LinkedList
 ```
