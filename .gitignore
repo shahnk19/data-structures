@@ -4,3 +4,8 @@ LinkedList
 Makefile
 cmake_install.cmake
 CMakeCache.txt
+Lib/
+_deps/
+# Ignore Binaries
+LinkedList
+LinkedListTest
