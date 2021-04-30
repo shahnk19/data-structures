@@ -14,8 +14,5 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # add the executable
-# add_executable(LinkedList src/linked_list.cpp)
-# add_test(LinkedListTest test/linked_list_test.cpp COMMAND linked_list_test)
-
 add_executable(LinkedListTest test/linked_list_test.cpp)
 target_link_libraries(LinkedListTest gtest_main)
