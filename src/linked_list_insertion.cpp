@@ -38,4 +38,17 @@ class LinkedListInsertion : public LinkedList{
       newNode->next = referenceNode->next;
       referenceNode->next = newNode;
     }
+
+    void InsertAtNode(int referenceValue, Node *newNode) {
+      Node *pin = head;
+
+      // find the Node at requested position
+      while(pin != NULL) {
+        if(pin->value == referenceValue)
+          break;
+        pin = pin->next;
+      }
+
+      InsertAfter(pin, newNode);
+    }
 };

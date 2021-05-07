@@ -38,6 +38,14 @@ TEST_F(LinkedListInsertionTest, InsertionAfter) {
     EXPECT_EQ ("[ 10 -> 30 -> 20 ]", ll.Stringify());
 }
 
+TEST_F(LinkedListInsertionTest, InsertionAtNode) {
+    Node *firstNode = new Node(10);
+    ll.Insert(firstNode);
+    ll.InsertAtNode(10, new Node(20));
+    EXPECT_EQ ("[ 10 -> 20 ]", ll.Stringify());
+    ll.InsertAtNode(10, new Node(30));
+    EXPECT_EQ ("[ 10 -> 30 -> 20 ]", ll.Stringify());
+}
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
