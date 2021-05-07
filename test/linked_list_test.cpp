@@ -18,6 +18,8 @@ TEST_F(LinkedListTest, Insertion) {
     ll.Insert(new Node(10));
     EXPECT_EQ (false, ll.IsEmpty());
     EXPECT_EQ ("[ 10 ]", ll.Stringify());
+    ll.Insert(new Node(20));
+    EXPECT_EQ ("[ 20 -> 10 ]", ll.Stringify());
 }
 
 TEST_F(LinkedListTest, Removal) {

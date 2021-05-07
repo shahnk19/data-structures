@@ -30,4 +30,12 @@ class LinkedListInsertion : public LinkedList{
       newNode->next = pin->next;
       pin->next = newNode;
     }
+
+    void InsertAfter(Node *referenceNode, Node *newNode) {
+      if(referenceNode == NULL)
+        return;
+
+      newNode->next = referenceNode->next;
+      referenceNode->next = newNode;
+    }
 };
