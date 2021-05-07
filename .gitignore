@@ -9,3 +9,5 @@ _deps/
 # Ignore Binaries
 LinkedList
 LinkedListTest
+LinkedListInsertion
+LinkedListInsertionTest
