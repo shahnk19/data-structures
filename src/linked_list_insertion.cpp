@@ -8,6 +8,8 @@ class LinkedListInsertion : public LinkedList{
   public:
 
     void InsertAtPosition(int position, Node *newNode) {
+      if(position < 0)
+        return;
       if(IsEmpty())
         return Insert(newNode);
 
@@ -19,6 +21,10 @@ class LinkedListInsertion : public LinkedList{
         pin = pin->next;
         iteratorCount++;
       }
+
+      // we hit the end of the list
+      if(pin == NULL)
+        return;
 
       // insert at pin Node
       newNode->next = pin->next;

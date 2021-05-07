@@ -10,7 +10,7 @@ class LinkedListInsertionTest : public ::testing::Test {
 
 TEST_F(LinkedListInsertionTest, InsertionAtPosition) {
     ll.InsertAtPosition(0, new Node(10));
-    // EXPECT_EQ ("[ 10 ]", ll.Stringify());
+    EXPECT_EQ ("[ 10 ]", ll.Stringify());
     ll.InsertAtPosition(0, new Node(20));
     EXPECT_EQ ("[ 10 -> 20 ]", ll.Stringify());    
     ll.InsertAtPosition(1, new Node(30));
@@ -19,6 +19,14 @@ TEST_F(LinkedListInsertionTest, InsertionAtPosition) {
     EXPECT_EQ ("[ 10 -> 20 -> 25 -> 30 ]", ll.Stringify());    
     ll.Insert(new Node(0));
     EXPECT_EQ ("[ 0 -> 10 -> 20 -> 25 -> 30 ]", ll.Stringify());    
+}
+
+TEST_F(LinkedListInsertionTest, InsertionAtPositionWithValidations) {
+    ll.InsertAtPosition(-1, new Node(10));
+    EXPECT_EQ ("[]", ll.Stringify());
+    ll.InsertAtPosition(0, new Node(10));
+    ll.InsertAtPosition(1, new Node(20));
+    EXPECT_EQ ("[ 10 ]", ll.Stringify());
 }
 
 int main(int argc, char **argv) {
