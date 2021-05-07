@@ -45,15 +45,20 @@ class LinkedList {
     }
 
     void Display() {
-      cout<<"[ ";
+      cout<<Stringify();
+    }
+
+    string Stringify() {
+      string content = "[";
       Node *pin = head;
       while(pin) {
-        cout<<pin->value;
+        content += " " + to_string(pin->value) + " ";
         pin = pin->next;
         if(pin) {
-          cout<<" -> ";
+          content += "->";
         }
       }
-      cout<<" ]"<<endl;
+      content += "]";
+      return content;
     }
 };
