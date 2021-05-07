@@ -10,4 +10,5 @@ A collection of data-structures implementations in C++.
 ```
   $ ./bin/build.sh
   $ ./LinkedListTest
+  $ ./LinkedListInsertionTest
 ```
