@@ -51,4 +51,20 @@ class LinkedListInsertion : public LinkedList{
 
       InsertAfter(pin, newNode);
     }
+
+    void InsertAtTail(Node *newNode) {
+      if(IsEmpty())
+        return Insert(newNode);
+
+      Node *pin = head;
+
+      // find the Node at end of the list
+      while(pin->next != NULL) {
+        pin = pin->next;
+      }
+
+      // insert at the last node found
+      newNode->next = pin->next;
+      pin->next = newNode;
+    }
 };
