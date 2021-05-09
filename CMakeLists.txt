@@ -16,5 +16,7 @@ FetchContent_MakeAvailable(googletest)
 # add the executable
 add_executable(LinkedListTest test/linked_list_test.cpp)
 add_executable(LinkedListInsertionTest test/linked_list_insertion_test.cpp)
+add_executable(LinkedListDeletionTest test/linked_list_deletion_test.cpp)
 target_link_libraries(LinkedListTest gtest_main)
 target_link_libraries(LinkedListInsertionTest gtest_main)
+target_link_libraries(LinkedListDeletionTest gtest_main)
