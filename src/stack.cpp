@@ -29,7 +29,7 @@ class Stack {
         return 0; // stack is empty
       }
 
-      return _stack[--top];
+      return _stack[top--];
     }
 
     string Stringify() {
