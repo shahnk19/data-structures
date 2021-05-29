@@ -17,7 +17,7 @@ class Stack {
     }
 
     void Push(int value) {
-      if(top > MAX_SIZE - 1) {
+      if(top >= MAX_SIZE - 1) {
         return; // stack is full
       }
 
@@ -25,7 +25,7 @@ class Stack {
     }
 
     int Pop() {
-      if(top == -1) {
+      if(IsEmpty()) {
         return 0; // stack is empty
       }
 

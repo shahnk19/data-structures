@@ -21,6 +21,14 @@ TEST_F(StackTest, Push) {
     stack.Push(30);
     stack.Push(40);
     EXPECT_EQ ("[ 40 30 20 10 ]", stack.Stringify());
+    stack.Push(50);
+    stack.Push(60);
+    stack.Push(70);
+    stack.Push(80);
+    stack.Push(90);
+    stack.Push(100);
+    stack.Push(110);
+    EXPECT_EQ ("[ 100 90 80 70 60 50 40 30 20 10 ]", stack.Stringify());
 }
 
 TEST_F(StackTest, Pop) {
