@@ -38,6 +38,16 @@ class Queue {
       }
     }
 
+    void Dequeue() {
+      if(IsEmpty())
+        return;
+
+      Node* tmp = head;
+      head = tmp->next;
+      tmp->next = NULL;
+      delete tmp;
+    }
+
     void Display() {
       cout<<Stringify();
     }
