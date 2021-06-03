@@ -28,6 +28,16 @@ class Queue {
       return false;
     }
 
+    void Enqueue(Node* newNode) {
+      if(tail)
+        tail->next = newNode;
+      tail = newNode;
+
+      if(head == NULL) {
+        head = tail;
+      }
+    }
+
     void Display() {
       cout<<Stringify();
     }
