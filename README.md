@@ -27,3 +27,9 @@ A collection of data-structures implementations in C++.
   $ ./StackTest
   $ ./StackBracketBalancer '{{}{}}'
 ```
+
+### Test the Queue
+
+```
+  $ ./QueueTest
+```

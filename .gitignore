@@ -14,3 +14,4 @@ LinkedListInsertionTest
 LinkedListDeletionTest
 StackTest
 StackBracketBalancer
+QueueTest
